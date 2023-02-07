@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // const crypto = require('node:crypto');
 // const createHmac = crypto.createHmac;
-const { createHmac } = require('node:crypto');// Instead of above too we can write this way in ES6
+const { createHmac } = require('crypto');// Instead of above too we can write this way in ES6
 //const { createHmac } = await import('node:crypto'); // SyntaxError: await is only valid in async functions and the top level bodies of modules
 //import { v4 as uuidv4 } from 'uuid'; // SyntaxError: Cannot use import statement outside a module
 const { v4: uuidv4 } = require('uuid');
