@@ -35,18 +35,18 @@ app.use(cookieParser());// Handles the header and populate req.cookie. If we wan
 
 app.use(cors());  // Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers that blocks web pages from making requests to a different domain than the one that served the web page. This is done to prevent malicious websites from making requests to your web browser on behalf of the user.
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "https://mern-tshirt-app.onrender.com/");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 var corsOptions = {
-    origin: 'http://localhost:3000/',
+    origin: 'https://mern-tshirt-app.onrender.com/',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
 // My Routes // Prefixing every route using /api for good practice , in future if you want to edit  route names you can direct come here and edit it which will be reflected to all routes
 app.use("/api", cors(corsOptions),(req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", "https://mern-tshirt-app.onrender.com/");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 },authRoutes);
