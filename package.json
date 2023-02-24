@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "server": "nodemon app.js",
+    "build": "npm start --prefix ./build",
+    "dev": "concurrently \"npm start\" \"npm run build\""
   },
   "repository": {
     "type": "git",
