@@ -78,20 +78,20 @@ app.use("/api",cors(corsOptions), stripeRoutes);
 //PORT
 const port = process.env.PORT||8000;
 
-if( process.env.NODE_ENV == "production"){
+// if( process.env.NODE_ENV == "production"){
 
-    app.use(express.static("build"));
+//     app.use(express.static("build"));
 
-    const path = require("path");
+//     const path = require("path");
 
-    app.get("*", (req, res) => {
+//     app.get("*", (req, res) => {
 
-        res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+//         res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 
-    })
+//     })
 
 
-}
+// }
 
 
 
